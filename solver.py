@@ -25,7 +25,31 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
         A dictionary mapping drop-off location to a list of homes of TAs that got off at that particular location
         NOTE: both outputs should be in terms of indices not the names of the locations themselves
     """
-    pass
+    list_of_homes_indices = []
+    for home in list_of_homes:# Create a list of home indices
+        list_of_homes_indices.append(list_of_locations.index(home))
+    G = adjacency_matrix_to_graph(adjacency_matrix)  #Create a graph
+    mst = nx.minimum_spanning_tree(G)  #Create a MST for the graph, for approximating TSP
+    for node in nx.nodes(mst): #delete leaf nodes that is not a home of TA
+        if (node not in list_of_homes_indices) and (len(nx.all_neighbors(mst, node)) == 1) and (node != starting_car_location) :
+            mst.remove_node(node)
+    tour = nx.dfs_preorder_nodes(G, starting_car_location)
+    tour.append(starting_car_location) #approximates TSP by MST
+    #handle exceptions
+    result_tour = []
+    result_tour.append(nx.shortest_path(G,tour[0], tour[1]))
+    i = 1
+    for i in range(1,len(tour)):
+        temp = nx.shortest_path(G, tour[i], tour[i + 1])
+        result_tour.append(temp[1:])
+    dropoff_dict = {}
+    for location in tour:
+        if location in list_of_homes_indices:
+            dropoff_dict[location] = [location for i in ]
+    return result_tour,
+
+
+
 
 """
 ======================================================================
