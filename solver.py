@@ -40,24 +40,26 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
             mst.remove_node(node)
 
     #approximates TSP by MST
-    tour = list(nx.dfs_preorder_nodes(G, starting_car_location_index))
-    tour.append(starting_car_location)
-
+    tour = list(nx.dfs_preorder_nodes(mst, starting_car_location_index))
+    tour.append(starting_car_location_index)
     #handle exceptions
     result_tour = []
-    result_tour.append(nx.shortest_path(G,tour[0], tour[1]))
+    result_tour += nx.shortest_path(mst,tour[0], tour[1])
     i = 1
 
-    for i in range(1,len(tour)):
-        temp = nx.shortest_path(G, tour[i], tour[i + 1])
-        result_tour.append(temp[1:])
-    home_count = dict(Counter(list_of_homes_indices))
+    for i in range(1,len(tour) - 1):
+        temp = nx.shortest_path(mst, tour[i], tour[i + 1])
+        result_tour += temp[1:]
+
+    home_count = dict(Counter(list_of_homes_indices)) #Handle cases that multiple TA lives together
     dropoff_dict = {}
 
     for location in tour:
         if location in list_of_homes_indices:
             dropoff_dict[location] = [location for j in range(home_count[location])]
 
+    print(result_tour)
+    print(dropoff_dict)
     return result_tour, dropoff_dict
 
 
