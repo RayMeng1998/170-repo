@@ -27,7 +27,7 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
         NOTE: both outputs should be in terms of indices not the names of the locations themselves
     """
     list_of_homes_indices = []
-
+    starting_car_location_index = list_of_locations.index(starting_car_location)
     for home in list_of_homes:# Create a list of home indices
         list_of_homes_indices.append(list_of_locations.index(home))
 
@@ -36,11 +36,11 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
     mst = nx.minimum_spanning_tree(G)  #Create a MST for the graph, for approximating TSP
     nodes_list = list(nx.nodes(mst)) #solve concurrent modification
     for node in nodes_list: #delete leaf nodes that is not a home of TA
-        if (node not in list_of_homes_indices) and (len(list(nx.all_neighbors(mst, node))) == 1) and (node != starting_car_location) :
+        if (node not in list_of_homes_indices) and (len(list(nx.all_neighbors(mst, node))) == 1) and (node != starting_car_location_index):
             mst.remove_node(node)
 
     #approximates TSP by MST
-    tour = list(nx.dfs_preorder_nodes(G, starting_car_location))
+    tour = list(nx.dfs_preorder_nodes(G, starting_car_location_index))
     tour.append(starting_car_location)
 
     #handle exceptions
