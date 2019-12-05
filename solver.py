@@ -4,6 +4,7 @@ sys.path.append('..')
 sys.path.append('../..')
 import argparse
 import utils
+from collections import Counter
 
 from student_utils import *
 """
@@ -42,11 +43,12 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
     for i in range(1,len(tour)):
         temp = nx.shortest_path(G, tour[i], tour[i + 1])
         result_tour.append(temp[1:])
+    home_count = dict(Counter(list_of_homes_indices))
     dropoff_dict = {}
     for location in tour:
         if location in list_of_homes_indices:
-            dropoff_dict[location] = [location for i in ]
-    return result_tour,
+            dropoff_dict[location] = [location for i in range(home_count[location])]
+    return result_tour, dropoff_dict
 
 
 
