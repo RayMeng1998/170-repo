@@ -27,27 +27,37 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
         NOTE: both outputs should be in terms of indices not the names of the locations themselves
     """
     list_of_homes_indices = []
+
     for home in list_of_homes:# Create a list of home indices
         list_of_homes_indices.append(list_of_locations.index(home))
-    G = adjacency_matrix_to_graph(adjacency_matrix)  #Create a graph
+
+    G = adjacency_matrix_to_graph(adjacency_matrix)[0]  #Create a graph
+
     mst = nx.minimum_spanning_tree(G)  #Create a MST for the graph, for approximating TSP
-    for node in nx.nodes(mst): #delete leaf nodes that is not a home of TA
-        if (node not in list_of_homes_indices) and (len(nx.all_neighbors(mst, node)) == 1) and (node != starting_car_location) :
+    nodes_list = list(nx.nodes(mst)) #solve concurrent modification
+    for node in nodes_list: #delete leaf nodes that is not a home of TA
+        if (node not in list_of_homes_indices) and (len(list(nx.all_neighbors(mst, node))) == 1) and (node != starting_car_location) :
             mst.remove_node(node)
-    tour = nx.dfs_preorder_nodes(G, starting_car_location)
-    tour.append(starting_car_location) #approximates TSP by MST
+
+    #approximates TSP by MST
+    tour = list(nx.dfs_preorder_nodes(G, starting_car_location))
+    tour.append(starting_car_location)
+
     #handle exceptions
     result_tour = []
     result_tour.append(nx.shortest_path(G,tour[0], tour[1]))
     i = 1
+
     for i in range(1,len(tour)):
         temp = nx.shortest_path(G, tour[i], tour[i + 1])
         result_tour.append(temp[1:])
     home_count = dict(Counter(list_of_homes_indices))
     dropoff_dict = {}
+
     for location in tour:
         if location in list_of_homes_indices:
-            dropoff_dict[location] = [location for i in range(home_count[location])]
+            dropoff_dict[location] = [location for j in range(home_count[location])]
+
     return result_tour, dropoff_dict
 
 
