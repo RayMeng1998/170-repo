@@ -1,4 +1,6 @@
 import networkx as nx
+from utils import *
+from student_utils import *
 def testfile():
     G = nx.Graph()
     G.add_nodes_from([1,2,3])
