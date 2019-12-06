@@ -32,7 +32,6 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
     for home in list_of_homes:# Create a list of home indices
         list_of_homes_indices.append(list_of_locations.index(home))
 
-    home_record = [] + list_of_homes_indices
 
     G = adjacency_matrix_to_graph(adjacency_matrix)[0]  #Create a graph
     mst = nx.minimum_spanning_tree(G)  #Create a MST for the graph, for approximating TSP
@@ -55,8 +54,7 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
         for n in temp:
             if (n in tour) and (tour.index(n)) < tour.index(home_list_in_tour[i]):
                 #pop something
-                print(temp)
-                result_tour.pop()
+                print(result_tour.pop())
                 if home_list_in_tour[i - 1] != n:
                     result_tour.append(list(nx.shortest_path(G, home_list_in_tour[i - 1], n)))
                 if home_list_in_tour[i + 1] != n:
@@ -66,12 +64,12 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
                     dropoff_dict[n].append(home_list_in_tour[i])
                 else:
                     dropoff_dict[n] = [home_list_in_tour[i]]
-                home_record.remove(home_list_in_tour[i])
+                list_of_homes_indices.remove(home_list_in_tour[i])
+                home_list_in_tour[i] = n
                 break
         if mod:
             result_tour.append(temp)
     final_tour = [starting_car_location_index]
-
     if starting_car_location_index not in list_of_homes_indices:
         final_tour += nx.shortest_path(G, starting_car_location_index, result_tour[0][0])[1:]
         final_tour += result_tour[0][1:]
@@ -82,12 +80,14 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
     final_tour.pop()
     final_tour += nx.shortest_path(G, last_location, starting_car_location_index)
     print(final_tour)
+
     #dropoff_dict
-    for home in home_record:
+    for home in list_of_homes_indices:
         if home in dropoff_dict.keys():
             dropoff_dict[home].append(home)
         else:
             dropoff_dict[home] = [home]
+    print(dropoff_dict)
     return final_tour, dropoff_dict
 
 
