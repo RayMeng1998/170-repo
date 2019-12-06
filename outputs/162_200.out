@@ -1,15 +1,17 @@
-FortCollins Harlingen Knoxville Hemet Albany Akron Aberdeen Arvada Aberdeen Barnstable Augusta Gilbert Jacksonville Aberdeen Brownsville Fayetteville Abilene Aberdeen Leominster Albuquerque Indianapolis Garland Akron Aberdeen Fargo BonitaSprings Baltimore Independence Bellevue Lakeland Abilene Dallas Bradenton Abilene Chicago Abilene Evansville Danbury Jefferson Burbank Harrisburg Albany Aberdeen Fremont Abilene Hollywood Hickory Inglewood Akron Layton Austin Abilene Kennewick Aberdeen Akron Carrollton Frederick Hampton Lafayette Aberdeen CollegeStation Boise ElPaso Berkeley Aberdeen CapeCoral Denver Albany Fairfield Joliet Akron CedarRapids Lorain Lancaster Anchorage ColoradoSprings DalyCity Akron Aberdeen Houston Fresno Kalamazoo Beaumont Aberdeen Abilene Lubbock Louisville Chandler Erie FortWaltonBeach Amarillo Alexandria AppleValley Allentown Bremerton Grayslake Henderson Manchester Atlanta BoiseCity Anaheim Abilene Detroit Lacey Brighton Irving Cary Elizabeth Bakersfield AnnArbor Elkhart Champaign FortCollins
-86
-Aberdeen Appleton GrandRapids Fontana Irvine Anaheim Lakewood ElMonte DavidsonCounty Abilene Aberdeen
-Akron DesMoines Cleveland LasCruces LittleRock Akron
-Abilene Bethlehem Eugene
+FortCollins Harlingen Knoxville Akron Elizabeth Arvada Leominster Fargo BonitaSprings Baltimore DesMoines Bloomington Layton Denver Layton Austin LasVegas Kennewick Anaheim ColoradoSprings Cleveland Bellevue Independence Bremerton Allentown Henderson Manchester BoiseCity Eugene Honolulu Burbank Jefferson Dallas Bradenton Bridgeport McAllen Chicago Clearwater Evansville FortWayne Fairfield Joliet LasCruces Fairfield Lancaster Anchorage Lubbock Louisville Barnstable Aberdeen CollegeStation Boise ElPaso GardenGrove Carrollton Frederick Hampton Lafayette Lakewood Berkeley DavidsonCounty Harrisburg Champaign Elkhart Brighton Lacey Detroit Corona AppleValley FortWaltonBeach Hickory Inglewood Hickory Erie Athens Bakersfield AtlanticCity Jacksonville Gilbert Houston Fresno DalyCity Fayetteville Brownsville Appleton Lorain Garland GrandRapids Indianapolis Albuquerque Davenport Amarillo Alexandria LittleRock Greensboro Abilene Grayslake Hollywood Hemet Fremont Irving Cary Lewisville AnnArbor ElMonte Irvine Chandler Lakeland CedarRapids Beaumont Bethlehem Kalamazoo CapeCoral Augusta Joliet Danbury Atlanta Fontana GulfportBiloxi FortCollins
+100
+Aberdeen Aberdeen
+Abilene Abilene
+Akron Akron
 Albuquerque Albuquerque
 Alexandria Alexandria
 Allentown Allentown
 Amarillo Amarillo
+Anaheim Anaheim
 Anchorage Anchorage
 AnnArbor AnnArbor
 AppleValley AppleValley
+Appleton Appleton
 Arvada Arvada
 Atlanta Atlanta
 Augusta Augusta
@@ -20,6 +22,7 @@ Barnstable Barnstable
 Beaumont Beaumont
 Bellevue Bellevue
 Berkeley Berkeley
+Bethlehem Bethlehem
 Boise Boise
 BoiseCity BoiseCity
 BonitaSprings BonitaSprings
@@ -35,21 +38,27 @@ CedarRapids CedarRapids
 Champaign Champaign
 Chandler Chandler
 Chicago Chicago
+Cleveland Cleveland
 CollegeStation CollegeStation
 ColoradoSprings ColoradoSprings
 Dallas Dallas
 DalyCity DalyCity
 Danbury Danbury
+DavidsonCounty DavidsonCounty
 Denver Denver
+DesMoines DesMoines
 Detroit Detroit
+ElMonte ElMonte
 ElPaso ElPaso
 Elizabeth Elizabeth
 Elkhart Elkhart
 Erie Erie
+Eugene Eugene
 Evansville Evansville
 Fairfield Fairfield
 Fargo Fargo
 Fayetteville Fayetteville
+Fontana Fontana
 FortCollins FortCollins
 FortWaltonBeach FortWaltonBeach
 Frederick Frederick
@@ -57,6 +66,7 @@ Fremont Fremont
 Fresno Fresno
 Garland Garland
 Gilbert Gilbert
+GrandRapids GrandRapids
 Grayslake Grayslake
 Hampton Hampton
 Harlingen Harlingen
@@ -69,6 +79,7 @@ Houston Houston
 Independence Independence
 Indianapolis Indianapolis
 Inglewood Inglewood
+Irvine Irvine
 Irving Irving
 Jacksonville Jacksonville
 Jefferson Jefferson
@@ -79,9 +90,12 @@ Knoxville Knoxville
 Lacey Lacey
 Lafayette Lafayette
 Lakeland Lakeland
+Lakewood Lakewood
 Lancaster Lancaster
+LasCruces LasCruces
 Layton Layton
 Leominster Leominster
+LittleRock LittleRock
 Lorain Lorain
 Louisville Louisville
 Lubbock Lubbock

@@ -1,10 +1,8 @@
-Monroe CSprings Naples Athens Muskegon Lewisville Allentown Danbury Hampton Prairie Collins Modesto Seven Melbourne Lacey Elizabeth Danbury Gilbert Arlington Bridgeport Abilene Charleston Johnson Burlington Laredo Athens Kailua Athens Rapids Five Jackson Huntsville Cleveland Athens Brownsville Athens Havre Viejo Hesperia Clarke Hagerstown Antioch Collins Greensboro Athens Jackson Lancaster Elkhart Huntington Athens Erie Killeen Anchorage Apple Fayetteville Danbury Daytona Five Athens Five Julian Denver Kennewick Bradenton Danbury Albany Five Athens Hialeah Mesa Bethlehem Hagerstown Hickory Hartford Glendale Amarillo Athens Birmingham Ten Jacksonville Kissimmee Lakeland Five Aberdeen Lowell Three Five Anaheim Danbury Lafayette Kenosha Baltimore Five Cary Dallas Irving Five Chesapeake Asheville Carrollton Baton Miami Corpus Fairfield Athens Hagerstown Akron Davidson Mobile Collins Montgomery Athens Detroit Clarksville Five Gainesville Hayward Denton Collins Dayton Austin Layton Canton Hagerstown Leominster Vista Monroe
-92
-Jackson Boise Boulder
-Athens Cambridge Mesquite Manchester Merced Athens
-Hagerstown Bedford Monterey Four Hagerstown
+Monroe Clarksville Lancaster Havre Aberdeen Lowell Cambridge Albany Boise Merced Montgomery Detroit Three Boulder Lacey Melbourne Julian Cleveland Erie Elkhart Huntington Hickory Hartford Glendale Amarillo Mesquite Burlington Dayton Elizabeth Irving Fairfield Asheville Chesapeake Manchester Cary Dallas Modesto Hampton Prairie Denton Hayward Lakeland Ten Jacksonville Anaheim Hialeah Mesa Carrollton Charleston Johnson Corpus Miami Allentown Lewisville Kennewick Denver Bradenton Akron Laredo Seven Kissimmee Canton Layton Brownsville Hesperia Clarke Killeen Baltimore Kenosha Gainesville Vista Greensboro Apple Fayetteville Davidson Rapids Arlington Bridgeport Abilene Four Monterey Antioch Hagerstown Leominster Mobile Birmingham Viejo Naples Bedford Anchorage Daytona Muskegon Austin Baton Gilbert Bethlehem Lafayette Athens Kailua Huntsville Monroe
+100
 Bradenton Bradenton
 Three Three
+Mesquite Mesquite
 Hampton Hampton
 Albany Albany
 Ten Ten
@@ -17,6 +15,7 @@ Baton Baton
 Allentown Allentown
 Fairfield Fairfield
 Arlington Arlington
+Four Four
 Elizabeth Elizabeth
 Chesapeake Chesapeake
 Gainesville Gainesville
@@ -29,6 +28,7 @@ Elkhart Elkhart
 Aberdeen Aberdeen
 Greensboro Greensboro
 Gilbert Gilbert
+Athens Athens
 Akron Akron
 Killeen Killeen
 Amarillo Amarillo
@@ -37,6 +37,7 @@ Seven Seven
 Monroe Monroe
 Johnson Johnson
 Naples Naples
+Hagerstown Hagerstown
 Havre Havre
 Vista Vista
 Brownsville Brownsville
@@ -44,12 +45,14 @@ Rapids Rapids
 Bridgeport Bridgeport
 Erie Erie
 Modesto Modesto
+Manchester Manchester
 Hesperia Hesperia
 Lowell Lowell
 Lancaster Lancaster
 Prairie Prairie
 Daytona Daytona
 Lacey Lacey
+Boulder Boulder
 Davidson Davidson
 Dayton Dayton
 Birmingham Birmingham
@@ -66,9 +69,12 @@ Laredo Laredo
 Mobile Mobile
 Bethlehem Bethlehem
 Apple Apple
+Cambridge Cambridge
 Hayward Hayward
 Austin Austin
 Lafayette Lafayette
+Monterey Monterey
+Merced Merced
 Asheville Asheville
 Glendale Glendale
 Viejo Viejo
@@ -76,11 +82,13 @@ Denton Denton
 Canton Canton
 Muskegon Muskegon
 Anaheim Anaheim
+Boise Boise
 Anchorage Anchorage
 Huntsville Huntsville
 Leominster Leominster
 Detroit Detroit
 Hialeah Hialeah
+Bedford Bedford
 Antioch Antioch
 Charleston Charleston
 Hickory Hickory

@@ -1,19 +1,18 @@
-YuhuaEast Sennett SerangoonGarden SingaporeRiver ChinaSquare Sentosa CityHall BayfrontSubzone Mandai PasirRis SembawangStraits OneTreeHill HongKah UpperThomson BedokNorth ClementiNorth Woodleigh Kembangan Woodleigh EvertonPark ReservoirView PulauPunggolTimor Khatib SimpangNorth Paterson KianTeck AlexandraNorth Trafalgar Sentosa Shipyard BedokNorth BedokSouth Matilda PasirRisPark OrangeGrove PeoplesPark BayfrontSubzone ChangiPoint SungeiKadut Saujana BoatQuay BedokNorth HougangCentral DefuIndustrialPark ChoaChuKang Aljunied MountEmily TuasNorthPioneer Sentosa SouthernIslands HongKahNorth Moulmein MountEmily KebunBahru Tampines BedokNorth BukitBatokWest Sentosa RochorCanal PayaLebarEast TohGuan PasirRisDrive Sentosa Museum BenoiSector BedokNorth TuasPromenade TiongBahru TuasBay Sentosa Tanglin PunggolField SembawangHills Sentosa UluPandan YioChuKangEast KeatHong PearlsHill SerangoonCentral Woodleigh BukitBatokSouth WoodlandsWest Northland Mountbatten Cairnhill DhobyGhaut Port YioChuKang Sentosa Commonwealth Sentosa SembawangHills Chatsworth InstitutionHill SungeiKadut SungeiRoad WaterwayEast Punggol PangSua TampinesNorth Sembawang EastCoast BedokNorth ChangiWest BedokNorth JurongPort PeiChun DairyFarm SungeiKadut JooSengPayaLebar SungeiKadut MandaiEast SungeiKadut BoonLayPlace LowerSeletar KianTeck TelokBlangahRise Woodleigh IstanaNegara SungeiKadut Geylang Sentosa JurongWestCentral Sentosa BedokNorth Punggol TagoreSindo SerangoonNorth Sentosa Geylang YuhuaEast
-96
-MountEmily GeylangEast
-SembawangHills KentRidge SembawangHills
-KianTeck Brickworks
-Sentosa OneNorth AngMoKioTownCentre Serangoon Sentosa
+YuhuaEast Sennett SerangoonGarden SingaporeRiver ChinaSquare Simpang CityHall Simpang Mandai PasirRis Mandai ChengSan BoonLayPlace LowerSeletar PearlsHill Sentosa TelokBlangahRise KampongUbi Brickworks Serangoon Trafalgar OneTreeHill SembawangStraits Shipyard PasirRisPark BedokSouth Matilda Geylang OrangeGrove PeoplesPark BayfrontSubzone Punggol TagoreSindo SerangoonNorth BedokNorth IstanaNegara ClementiWest JurongWestCentral OneNorth Anson AngMoKioTownCentre SungeiRoad WaterwayEast SungeiRoad Commonwealth KentRidge Commonwealth Chatsworth InstitutionHill Chatsworth TuasNorthPioneer WestCoast SouthernIslands HongKahNorth KeatHong Dunearn SembawangHills Dunearn UluPandan YioChuKangEast PulauPunggolTimor ReservoirView EvertonPark ClementiNorth PasirRisDrive TohGuan PayaLebarEast Museum GeylangEast MountEmily KebunBahru Tampines PengSiang BukitBatokWest PengSiang WoodlandsWest Northland Mountbatten JurongPort PeiChun DairyFarm PangSua Paterson SimpangNorth AlexandraNorth SimpangNorth Khatib SerangoonCentral PasirPanjang2 BukitBatokSouth SenokoWest JooSengPayaLebar TampinesNorth Sembawang EastCoast ChangiPoint Cairnhill WoodlandsSouth Port RochorCanal Boulevard MandaiEast Aljunied BoatQuay Saujana HougangCentral DefuIndustrialPark ChoaChuKang HongKah UpperThomson Kembangan YioChuKang BenoiSector Moulmein Tanglin TuasPromenade SembawangEast TuasBay TiongBahru TuasBay PunggolField SungeiKadut TelokBlangahRise KampongUbi DhobyGhaut Queensway ChangiWest PotongPasir YuhuaEast
+100
 Northland Northland
 HongKah HongKah
+AngMoKioTownCentre AngMoKioTownCentre
 SerangoonNorth SerangoonNorth
 Paterson Paterson
 Punggol Punggol
 YioChuKang YioChuKang
+KentRidge KentRidge
 Commonwealth Commonwealth
 KeatHong KeatHong
 HongKahNorth HongKahNorth
 BedokNorth BedokNorth
+Serangoon Serangoon
 OneTreeHill OneTreeHill
 EastCoast EastCoast
 Sennett Sennett
@@ -47,13 +46,16 @@ TagoreSindo TagoreSindo
 Shipyard Shipyard
 JurongPort JurongPort
 ClementiNorth ClementiNorth
+GeylangEast GeylangEast
 Khatib Khatib
 Matilda Matilda
+Brickworks Brickworks
 BukitBatokWest BukitBatokWest
 Aljunied Aljunied
 SerangoonGarden SerangoonGarden
 SerangoonCentral SerangoonCentral
 PearlsHill PearlsHill
+SembawangHills SembawangHills
 SingaporeRiver SingaporeRiver
 PasirRisPark PasirRisPark
 BoatQuay BoatQuay
@@ -62,6 +64,7 @@ EvertonPark EvertonPark
 AlexandraNorth AlexandraNorth
 PeiChun PeiChun
 PunggolField PunggolField
+Sentosa Sentosa
 InstitutionHill InstitutionHill
 TohGuan TohGuan
 DhobyGhaut DhobyGhaut
@@ -78,6 +81,7 @@ Geylang Geylang
 Cairnhill Cairnhill
 Sembawang Sembawang
 WoodlandsWest WoodlandsWest
+OneNorth OneNorth
 Mandai Mandai
 YioChuKangEast YioChuKangEast
 Port Port

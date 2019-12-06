@@ -26,69 +26,54 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
         A dictionary mapping drop-off location to a list of homes of TAs that got off at that particular location
         NOTE: both outputs should be in terms of indices not the names of the locations themselves
     """
-    #rank 167/202
+    G = adjacency_matrix_to_graph(adjacency_matrix)[0]  #Create a Graph
     list_of_homes_indices = []
-    starting_car_location_index = list_of_locations.index(starting_car_location)
+    starting_car_location_index = list_of_locations.index(starting_car_location) # Change the starting_car_location to index
+    dropoff_dict = {}
+    tour = [starting_car_location_index]
     for home in list_of_homes:# Create a list of home indices
         list_of_homes_indices.append(list_of_locations.index(home))
-
-
-    G = adjacency_matrix_to_graph(adjacency_matrix)[0]  #Create a graph
-    mst = nx.minimum_spanning_tree(G)  #Create a MST for the graph, for approximating TSP
-    nodes_list = list(nx.nodes(mst)) #solve concurrent modification
-    for node in nodes_list: #delete leaf nodes that is not a home of TA
-        if (node not in list_of_homes_indices) and (len(list(nx.all_neighbors(mst, node))) == 1) and (node != starting_car_location_index):
-            mst.remove_node(node)
-
-    #approximates TSP by MST
-    tour = list(nx.dfs_preorder_nodes(mst, starting_car_location_index))
-    dropoff_dict = {}
-    #handle exceptions
-    result_tour = []
-
-    home_list_in_tour = [starting_car_location_index] + [x for x in tour if x in list_of_homes_indices]
-
-    for i in range(len(home_list_in_tour) - 1):
-        temp = list(nx.shortest_path(G, home_list_in_tour[i], home_list_in_tour[i + 1]))
-        mod = True
-        for n in temp:
-            if (n in tour) and (tour.index(n)) < tour.index(home_list_in_tour[i]):
-                #pop something
-                print(result_tour.pop())
-                if home_list_in_tour[i - 1] != n:
-                    result_tour.append(list(nx.shortest_path(G, home_list_in_tour[i - 1], n)))
-                if home_list_in_tour[i + 1] != n:
-                    result_tour.append(list(nx.shortest_path(G, n, home_list_in_tour[i + 1])))
-                mod = False
-                if n in dropoff_dict.keys():
-                    dropoff_dict[n].append(home_list_in_tour[i])
-                else:
-                    dropoff_dict[n] = [home_list_in_tour[i]]
-                list_of_homes_indices.remove(home_list_in_tour[i])
-                home_list_in_tour[i] = n
-                break
-        if mod:
-            result_tour.append(temp)
-    final_tour = [starting_car_location_index]
-    if starting_car_location_index not in list_of_homes_indices:
-        final_tour += nx.shortest_path(G, starting_car_location_index, result_tour[0][0])[1:]
-        final_tour += result_tour[0][1:]
-        result_tour.pop(0)
-    for t in result_tour:
-        final_tour += t[1:]
-    last_location = final_tour[-1]
-    final_tour.pop()
-    final_tour += nx.shortest_path(G, last_location, starting_car_location_index)
-    print(final_tour)
-
-    #dropoff_dict
+    #Eliminating Dead-End Scenario
     for home in list_of_homes_indices:
-        if home in dropoff_dict.keys():
-            dropoff_dict[home].append(home)
+        n = nx.all_neighbors(G,home)
+        if list(n) == 1:
+            list_of_homes_indices.remove(home)
+            dropoff_list = [home]
+            neighbor = n[0]
+            ns = nx.all_neighbors(G, neighbor)
+            count = len(ns)
+            while count == 2:
+                if neighbor in list_of_homes_indices:
+                    list_of_homes_indices.remove(neighbor)
+                    dropoff_list.append(neighbor)
+                ns.remove(neighbor)
+                neighbor = ns[0]
+                ns = nx.all_neighbors(G, neighbor)
+                count = len(ns)
+            if neighbor not in dropoff_dict.keys():
+                dropoff_dict[neighbor] = dropoff_list
+            else:
+                dropoff_dict[neighbor] += dropoff_list
         else:
-            dropoff_dict[home] = [home]
-    print(dropoff_dict)
-    return final_tour, dropoff_dict
+            if home not in dropoff_dict.keys():
+                dropoff_dict[home] = [home]
+            else:
+                dropoff_dict[home].append(home)
+    start_point = starting_car_location_index
+    sth = None
+    while list_of_homes_indices:
+        min, result = float('inf'), None
+        for home in list_of_homes_indices:
+            l = nx.dijkstra_path_length(G, start_point, home)
+            if l < min:
+                min, result = l, home
+        tour += list(nx.dijkstra_path(G, start_point, result)[1:])
+        start_point = result
+        if len(list_of_homes_indices) == 1:
+            sth = list_of_homes_indices[0]
+        list_of_homes_indices.remove(result)
+    tour += list(nx.dijkstra_path(G, sth, starting_car_location_index)[1:])
+    return tour, dropoff_dict
 
 
 
